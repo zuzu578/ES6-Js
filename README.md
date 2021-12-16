@@ -211,3 +211,56 @@ const tt = async() =>{
 tt();
 
 ```
+
+# class 
+``` javascript 
+
+class A {
+  constructor(param1,param2){
+    this.param1 = param1;
+    this.param2 = param2;
+
+  }
+  methods(){
+    console.log('methods');
+    console.log(this.param1);
+    console.log(this.param2);
+    
+  }
+}
+
+const a1 = new A(20,30);
+a1.methods();
+
+```
+# String.includes()
+해당 문자열이 포함되어있는지 확인 후 true 를 리턴한다.
+```javascript 
+
+let text = "Hello world, welcome to the universe.";
+text.includes("world")    // Returns true
+
+```
+
+# String.startsWith()
+문자열이 어떤것으로 시작되는지 판별한다 
+``` javascript 
+let text = "Hello world, welcome to the universe.";
+
+text.startsWith("Hello")   // Returns true
+
+```
+# JavaScript Array.includes() 
+
+배열 요소중 특정 요소엘레멘트가 있는지 확인하고 true / false 를 return 한다.
+``` javascript 
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+
+console.log(fruits.includes("Mango"))
+
+
+```
+
+
+
+
