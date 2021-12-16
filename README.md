@@ -1,5 +1,28 @@
 # ES6-Js / 그외 몰랐던 문법들 정리 
 
+# this 
+
+this 가 가르키는 바는 일반적인 context 에서는 window 객체 ( global ) 을 가리킨다. 하지만 이 상황에서는 이야기가 달라진다. 
+``` javascript 
+
+let obj = {
+  myVar: 'foo',
+  
+  myFunc: function() { 
+    let self = this;
+    console.log(this.myVar)   
+ 
+    setTimeout(()=> {
+      console.log(this.myVar)
+    }, 1000)
+  }
+}
+obj.myFunc() 
+
+
+```
+obj(객체안)에서 this 는 obj 를 가리키므로 , this.myVar 는 obj.myVar 를 가리킨다.
+
 # Arrow functions 
 
 화살표함수는 다음과 같은 표현식에서 대체할수있다. 단 arrow function 은 , context 에 따라 this 가 달라진다.
