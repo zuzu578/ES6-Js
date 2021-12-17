@@ -56,6 +56,7 @@ inner();
 
 ```
 
+
 # this 
 
 this 가 가르키는 바는 일반적인 context 에서는 window 객체 ( global ) 을 가리킨다. 하지만 이 상황에서는 이야기가 달라진다. 
@@ -100,6 +101,24 @@ const myFnc = () => {
 }
 
 ```
+
+마찬가지로 콜백함수도 화살표함수로 이렇게 바꿀수 있다.
+
+```javascript
+
+const callFnc = (param1,callback) =>{
+    let num2 = 21;
+    return callback(param1 + num2);
+}
+
+const test = callFnc(2000,(result)=>{
+  console.log(result)
+})
+
+```
+
+
+
 
 # Template Literals
 
