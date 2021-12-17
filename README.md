@@ -56,6 +56,45 @@ inner();
 
 ```
 
+# closure 의 응용
+
+버튼을 클릭하면 count 가 증가하는 function 이 있다고 가정하고 , 이를 closure 를 이용하여 구현 해본다.
+
+```javascript
+
+// 전역변수를 사용한 예시 
+let globalVar = 0;
+
+ function handleCilck () {
+  globalVar ++;
+  console.log('globalVar =>', globalVar)
+  return globalVar;
+}
+
+
+
+
+```
+
+```javascript
+
+// closure 를 사용 
+const btn = document.querySelector('button')
+
+let handleCilck = (callback) => {
+  let count = 0
+  return ()=>{
+    count++
+    return callback(count)
+  }
+}
+
+btn.addEventListener('click',handleCilck((result1)=>{
+  console.log(result1);
+}))
+
+```
+
 
 # this 
 
