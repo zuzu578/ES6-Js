@@ -1,4 +1,46 @@
 # ES6-Js / 그외 몰랐던 문법들 정리 
+# Closure (클로저)
+
+클로저란 내부에 선언된 함수가 외부함수의 지역변수를 사용할수있는 (접근할수있는것) 을 말한다.
+
+클로저를 이용하여 전역변수를 줄일수 있고 , 비슷한형태의 코드를 , 재사용률을 높일 수 있다.
+
+``` javascript
+
+// 내부 함수가 외부함수의 지역변수에 접근할수있다.
+function outerFnc(){
+  let outerVar = 'outerVar';
+  return function innerFnc(){
+    console.log(outerVar);
+    //return outerVar;
+  }
+}
+
+let inner = outerFnc();
+inner()
+//console.log(inner())
+
+
+```
+
+화살표함수로 이렇게 바꿀수 있다.
+
+``` javascript
+
+
+
+const outerFnc = () => {
+  let outerVar = 'outerVar';
+  return innerFnc = () =>{
+    console.log(outerVar);
+  }
+}
+
+let inner = outerFnc();
+inner();
+
+
+```
 
 # this 
 
