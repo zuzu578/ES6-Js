@@ -1,5 +1,40 @@
 # ES6-Js / 그외 몰랐던 문법들 정리 
 
+# 문자열 정렬하는 방법
+
+ ```javascript
+
+const arrSort = s => {
+   let a = s.split('').sort().reverse().reduce((a,b) => a+b) 
+   console.log(a) 
+   }
+    arrSort("ceasgwZ")
+
+
+
+
+```
+1. 들어온 문자열을 쪼개어 배열로 만든다.(split)
+
+2. 오름차순으로 정렬한다.(sort)
+
+3. 반전시킨다(reverse)
+
+4. 문자 하나하나 들어가있는 배열을 합친다.(reduce)
+
+
+# 문자열에서 중복된 값 제거하기 
+
+``` javascript
+function removeDuplicateCharacters(string) {
+  return string
+    .split('')
+    .filter(function(item, pos, self) {
+      return self.indexOf(item) == pos;
+    })
+    .join('');
+}
+```
 # javscript 에서 function 
 
 자바스크립트에서 function 은 일급객체라고 부른다. 일급객체의 특징은 다음과 같이 설명한다.
