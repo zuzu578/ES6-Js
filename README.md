@@ -12,6 +12,19 @@ str1 = str1.concat(last).concat(str2).split(',').join(' ');
 console.log(str1)
  
   ```
+  
+# Json 값만 배열로 추출하기
+
+``` javascript
+
+const arr1 = {value1 : 13 ,value2 : 12 , value3 : 14 , value4 : 15}
+let temp = Object.values(arr1);
+
+
+console.log(temp)
+
+
+```
 # shift , unshift
 
 배열의 맨앞에 요소를 추가할때는 unshift , 삭제는 shift 할때 사용한다.
