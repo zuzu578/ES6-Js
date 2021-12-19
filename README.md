@@ -1,5 +1,48 @@
 # ES6-Js / 그외 몰랐던 문법들 정리 
 
+# 문자열에서 띄어쓰기하기 (문자열에 공백을 추가하기 (만약) )
+
+예를들어 두개 문자 hello,world 가 있는데 이 두개 사이에 공백을 추가해서 hello world 로 하고싶다면
+ ```javascript
+let str1 = '문자열1';
+let str2 = '문자열2';
+let last = ','
+str1 = str1.concat(last).concat(str2).split(',').join(' ');
+
+console.log(str1)
+ 
+  ```
+# shift , unshift
+
+배열의 맨앞에 요소를 추가할때는 unshift , 삭제는 shift 할때 사용한다.
+
+stack 구조 (Last in first out) 으로 동작하기 때문에 stack 을 구현할 경우 , shift , unshift를 사용하도록 한다
+
+```javascript
+
+const arr = [];
+arr.unshift('a');
+arr.unshift('b');
+arr.unshift('c');
+
+
+```
+
+# concat(배열 합치기)
+
+```javascript
+const arr3 = ['hello','world','test']
+const arr4 = ['test2','test3','test4']
+// foreach 
+arr3.forEach((item,index)=>{arr4.push(item)});
+console.log(arr4)
+// concat 
+arr5 = arr3.concat(arr4)
+console.log(arr5)
+
+```
+   
+
 # 문자열 정렬하는 방법
 
  ```javascript
