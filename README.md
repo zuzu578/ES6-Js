@@ -42,6 +42,31 @@ console.log(arr5)
 
 ```
    
+# splice
+
+```javascript
+
+const str1 = [1,2,3,4,5];
+// splice 삭제 
+//str1.splice(0,2);
+//console.log(str1)
+// splice(시작인덱스 , 삭제할 요소 길이 , 추가 요소1 , 추가 2...)
+// splice => 배열 요소들 사이에 요소를 추가할수있다.
+// 단 , 요소 사이에 추가하기 위해서 기존 에있는 요소를 삭제한뒤 추가해야함
+str1.splice(1,1,20);
+str1.splice(3,1,50)
+console.log(str1)
+
+
+// splice 요소추가
+const str3 = ['펭수','라이언','어피치','콘','브라운'];
+
+// => [네오 , 튜브 , 프로도 , 브라운 ]
+str3.splice(0,4,'네오','튜브','프로도')
+console.log(str3)
+
+```
+
 
 # 문자열 정렬하는 방법
 
