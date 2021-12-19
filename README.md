@@ -27,6 +27,42 @@ arr.unshift('c');
 
 
 ```
+# find 
+
+find() 를 사용하여 배열을 순환하다 , 파라미터로 넘긴 함수의 조건을 만족하는 요소가 발견되면 조건에 해당하는 요소를 반환하고 즉시 종료한다.
+이때 반환값은 하나를 반환한다 즉, find()를 통해 , 조건을 찾게되면 순환문이 멈추고 , 조건을 (하나) 리턴하고 종료한다.
+``` javascript
+const arr1 = [{name:'hello',age:20},{name:'테스트',age:21},{name:'테스트2',age:22},{name:'테스트3',age:24},{name:'테스트4',age:19},]
+
+const found = arr1.find((item)=> item.age === 19);
+console.log(found)
+
+
+```
+# filter
+filter() 를 사용하면 , 파라미터로 넘긴 함수의 조건을 만족하는 요소만을 모아 배열로 반환한다. 즉 , 필터링을 해주고 필터링한 요소를 여러개를 반환할때 사용한다. 
+
+``` javascript
+
+const arr1 = [{name:'hello',age:20},{name:'테스트',age:21},{name:'테스트2',age:19},{name:'테스트3',age:19},{name:'테스트4',age:19},]
+
+const filtering = arr1.filter((item)=> item.age === 19);
+const filtering2 = arr1.filter((item)=> item.age > 19);
+//console.log(filtering)
+console.log(filtering2)
+
+
+```
+
+# some (조건을 만족하는 요소가 있는지 확인하기 )
+조건을 만족하는 요소가 1개라도 있으면 true 그렇지 않으면 false 를 반환 , 조건을 만족하는 요소가 있으면 남은 요소들을 더 확인하지 않고 true 를 반환하고 종료한다.
+``` javascript
+const arr1 = [{name:'hello',age:20},{name:'테스트',age:21},{name:'테스트2',age:19},{name:'테스트3',age:19},{name:'테스트4',age:19},]
+
+bool_check = arr1.some(item => item.name === '테스트4')
+console.log(bool_check)
+
+```
 # reduce 
 
 ``` javascript 
