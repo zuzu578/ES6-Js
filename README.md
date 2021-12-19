@@ -27,7 +27,43 @@ arr.unshift('c');
 
 
 ```
+# reduce 
 
+``` javascript 
+// reduce 사용시 , 배열의 합구하기 
+const arr1 = [1,2,3,4,5];
+const sum = arr1.reduce((stack,item)=>{
+  return stack+item
+},0)
+console.log(sum)
+// foreach 사용시 배열의 합구하기 
+let globalVar = 0;
+arr1.forEach((item,index)=>{
+  globalVar = globalVar+item
+})
+console.log(globalVar)
+
+
+
+```
+# reduce 이용하여 단일 배열로 단순화 하기
+
+```javascript
+const arr2 = [1,[2,3],4,[5,6,7]];
+// reduce 중첩배열 단순화 
+const arr_concat = arr2.reduce((stack,item)=>{
+  return stack.concat(item);
+},[]);
+
+console.log(arr_concat)
+// reduce 를 이용한 중첩배열 단순화 + join 
+const arr3 = [1,[2,3],4,[5,6,[7,8,9]]];
+const arr_concat2 = arr3.reduce((stack,item)=>{
+  return stack.concat(item);
+},[]);
+console.log(arr_concat2.join(',').split(','))
+
+```
 # concat(배열 합치기)
 
 ```javascript
