@@ -111,6 +111,21 @@ console.log(globalVar)
 
 
 ```
+# reduce 를 이용하여 배열의 평균 구하기
+
+
+``` javascript
+const arr = [1,2,3,4]
+
+let res = arr.reduce((accumulator,currentValue,currentIndex,array)=>{
+return (accumulator + currentValue)
+})
+
+
+console.log(res/arr.length)
+
+
+```
 # reduce 이용하여 단일 배열로 단순화 하기
 
 ```javascript
