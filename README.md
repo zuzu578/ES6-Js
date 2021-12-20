@@ -13,6 +13,21 @@ console.log(str1)
  
   ```
   
+# padStart
+``` javascript
+//padstart로 휴대폰번호 마스킹하기
+
+ const solution = (phone_number) => {
+    // String.prototype.padStart() 사용
+    const last4Digits = phone_number.slice(-4);
+    const maskedNumber = last4Digits.padStart(phone_number.length, '*');
+  
+    return maskedNumber;
+}
+
+
+
+```
 # Json 값만 배열로 추출하기
 
 ``` javascript
