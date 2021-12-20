@@ -169,7 +169,7 @@ console.log(str3)
 ```
 
 
-# 문자열 정렬하는 방법
+# 문자열 정렬하는 방법 ( reverse ) 
 
  ```javascript
 
@@ -191,7 +191,17 @@ const arrSort = s => {
 
 4. 문자 하나하나 들어가있는 배열을 합친다.(reduce)
 
+``` javascript
+// 전체 문자열 반대로 뒤집기 
+var name = "test";
 
+var nameReverse = name.split("").reverse().join(""); 
+
+
+
+
+
+```
 # 문자열에서 중복된 값 제거하기 
 
 ``` javascript
