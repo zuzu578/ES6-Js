@@ -52,6 +52,22 @@ console.log(found)
 
 
 ```
+find() 의 사용예시는 다음과 같다.
+
+```javascript
+// programmers 1단계 문제 서울에서 김서방 찾기 에서.
+
+const solution = (seoul) => {
+    let answer = '';
+    const found = seoul.findIndex(element => element === 'Kim');
+    //console.log(found)
+    answer = `김서방은 ${found}에 있다`
+    console.log(answer)
+    return answer;
+}
+
+
+```
 # filter
 filter() 를 사용하면 , 파라미터로 넘긴 함수의 조건을 만족하는 요소만을 모아 배열로 반환한다. 즉 , 필터링을 해주고 필터링한 요소를 여러개를 반환할때 사용한다. 
 
