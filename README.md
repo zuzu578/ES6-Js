@@ -202,6 +202,20 @@ var nameReverse = name.split("").reverse().join("");
 
 
 ```
+
+```javascript
+// 자연수 뒤집어 배열로 만들기
+// n => 12345 를 뒤집어서 [5,4,3,2,1] 로 만들고자 할때.
+function solution(n) {
+    let answer = [];
+    let str = parseInt(n) + ''
+    let a = str.split('').reverse()
+    a.forEach((i)=>answer.push(parseInt(i)))
+    return answer;
+}
+
+
+```
 # 문자열에서 중복된 값 제거하기 
 
 ``` javascript
