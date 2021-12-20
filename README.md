@@ -1,6 +1,18 @@
 # ES6-Js / 그외 몰랐던 문법들 정리 
 
 
+# parseInt() 
+문자열 인자를 파싱하여 특정 진수 의 정수를 반환한다.
+```javascript
+parseInt(string)
+parseInt(string, radix)
+/**
+*
+*string의 진수를 나타내는 2부터 36까지의 정수입니다. 주의하세요. 기본 값이 10이 아닙니다! Number 자료형이 아닌 경우 Number로 변환합니다.
+*
+**/
+
+```
 
 # 배열에서 배열 element 요소를 정수로 바꾸기 
 
@@ -13,7 +25,7 @@ const solution = (n) => {
     temp = temp.split(""); // "123" 을 배열로 만든다 ["1","2","3"]
     // map 을 이용하여 순회하여 각 요소들을 정수로 casting 해준다.
     temp = temp.map((x)=>{
-        return parseInt(x,10)
+        return parseInt(x)
     })
     console.log(temp);
   return answer;
