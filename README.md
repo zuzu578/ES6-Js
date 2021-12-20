@@ -12,7 +12,29 @@ str1 = str1.concat(last).concat(str2).split(',').join(' ');
 console.log(str1)
  
   ```
-  
+# 배열에서 최소값 을 찾고 , 최소값을 삭제하기
+
+```javascript
+
+// 배열에서 최소값을 찾고 , 최소값 삭제 
+function solution(arr) {
+    let answer = [];
+    let index = '';
+    let min = Math.min(...arr.map(item => {
+        return item
+    }));
+    index = arr.indexOf(min); // 삭제할 최소값 item 의 index 
+    arr.splice(index,1)
+    console.log(arr)
+    if(arr.length === 0){
+        arr.push(-1)
+        return arr
+    }
+    return arr;
+}
+
+
+```
 # padStart
 ``` javascript
 //padstart로 휴대폰번호 마스킹하기
