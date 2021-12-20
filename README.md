@@ -247,9 +247,21 @@ str3.splice(0,4,'네오','튜브','프로도')
 console.log(str3)
 
 ```
+# 숫자 내림차순으로 정렬하는법 
+
+``` javascript
+const solution = (n) => {
+    let answer = 0;
+    let temp ='' 
+    temp = n.toString() // 들어온 parameter 를 string 
+    temp = temp.split('').sort().reverse().join('') // split 한다음 문자열을 배열로 생성 , reverse 후 , join 
+    return parseInt(temp);
+}
 
 
-# 문자열 정렬하는 방법 ( reverse ) 
+```
+
+# 문자열 정렬하는 방법 ( reverse )  오름차순 
 
  ```javascript
 
