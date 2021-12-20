@@ -12,6 +12,34 @@ str1 = str1.concat(last).concat(str2).split(',').join(' ');
 console.log(str1)
  
   ```
+  
+# Match.min / Match.max 배열에서 사용하기
+
+```javascript
+
+const test = [1,2,3,4,5,6]
+let temp = Math.max(...test); // test 배열에서 최대값을 가지는 element 를 반환한다.
+let temp = Math.min(...test); // test 배열에서 최소값을 가지는 element 를 반환한다.
+
+
+// 배열에서 최소값을 찾고 , 최소값 삭제 
+function solution(arr) {
+    let answer = [];
+    let index = '';
+    let min = Math.min(...arr);
+    index = arr.indexOf(min); // 삭제할 최소값 item 의 index  
+    arr.splice(index,1)
+    // 최소값이 없는경우 return -1 
+    if(arr.length === 0){
+        arr.push(-1)
+        return arr
+    }
+    return arr;
+}
+
+
+
+```
 # 배열에서 최소값 을 찾고 , 최소값을 삭제하기
 
 ```javascript
