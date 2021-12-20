@@ -1,5 +1,26 @@
 # ES6-Js / 그외 몰랐던 문법들 정리 
 
+
+
+# 배열에서 배열 element 요소를 정수로 바꾸기 
+
+```javascript
+
+// n => parameter 123
+const solution = (n) => {
+    let answer = 0;
+    let temp = n.toString(); //123을 to String
+    temp = temp.split(""); // "123" 을 배열로 만든다 ["1","2","3"]
+    // map 을 이용하여 순회하여 각 요소들을 정수로 casting 해준다.
+    temp = temp.map((x)=>{
+        return parseInt(x,10)
+    })
+    console.log(temp);
+  return answer;
+}
+
+
+```
 # 문자열에서 띄어쓰기하기 (문자열에 공백을 추가하기 (만약) )
 
 예를들어 두개 문자 hello,world 가 있는데 이 두개 사이에 공백을 추가해서 hello world 로 하고싶다면
