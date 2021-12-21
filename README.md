@@ -1,5 +1,143 @@
 # ES6-Js / 그외 몰랐던 문법들 정리 
 
+# Array.prototype.sort()
+배열을 정렬한다.
+
+```javascript
+/**
+ * Array.prototype.sort()
+ * arr.sort([compareFunction])
+ */
+
+/**
+ * compareFunction
+ * 정렬순서를 정의하는 함수 
+ * 이 값이 생략되면 배열의 element들은 문자열로 취급되서 유니코드 값 순서대로 정렬된다.
+ */
+// compareFunction 함수의 형식 
+function compare(a, b) {
+  if (a is less than b by some ordering criterion) {
+    return -1;
+  }
+  if (a is greater than b by the ordering criterion) {
+    return 1;
+  }
+  // a must be equal to b
+  return 0;
+}
+/**
+ * compareFunction(a,b) 가 0 보다 작은경우 a를 b보다 낮은색인으로 정렬한다. a가 먼저온다
+ * compareFunction(a,b) 가 0을 반환하면 a,b를 서로 변경하지않고 모든 다른요소에 대해 정렬한다.
+ * compareFunction(a,b) 가 0보다 큰경우 b를a 보다 낮은 인덱스로 정렬한다.
+ */
+arr3.sort((a,b)=>{
+  console.log(a,b)
+  if(a > b) return 1;
+  if(a === b) return 0;
+  if(a < b) return -1;
+});
+
+//console.log(arr3) // 정렬됨 (숫자 낮은거 기준으로)
+//console.log(arr3.reverse()) // 반대로 정렬됨
+
+const items = [
+  { name: 'Edward', value: 21 },
+  { name: 'Sharpe', value: 37 },
+  { name: 'And', value: 45 },
+  { name: 'The', value: -12 },
+  { name: 'Magnetic', value: 13 },
+  { name: 'Zeros', value: 37 }
+];
+/**
+ * 객체 정렬하기, value 를 기준으로 
+ */
+items.sort((a,b)=>{
+  if(a.value > b.value) return 1;
+  if(a.value === b.value) return 0;
+  if(a.value < b.value) return -1;
+
+})
+
+/**
+ * 객체 정렬하기, value 를 기준으로 
+ */
+items.sort((a,b)=>{
+  if(a.name > b.name) return 1;
+  if(a.name === b.name) return 0;
+  if(a.name < b.name) return -1;
+
+})
+//console.log(items) // value 가 낮은것부터 정렬
+//console.log(items.reverse()) // value 가 높은것부터 정렬
+//console.log(items) // name 에서 알파벳 순서대로 정렬
+console.log(items) // name 에서 알파벳 순서 반대로 정렬
+
+
+
+
+```
+
+# 문자열로 들어온 숫자 내림차순으로 정렬하는법 
+
+``` javascript
+const solution = (n) => {
+    let answer = 0;
+    let temp ='' 
+    temp = n.toString() // 들어온 parameter 를 string 
+    temp = temp.split('').sort().reverse().join('') // split 한다음 문자열을 배열로 생성 , reverse 후 , join 
+    return parseInt(temp);
+}
+
+
+```
+
+# 문자열 정렬하는 방법 ( reverse )  오름차순 
+
+ ```javascript
+
+const arrSort = s => {
+   let a = s.split('').sort().reverse().reduce((a,b) => a+b) 
+   console.log(a) 
+   }
+    arrSort("ceasgwZ")
+
+
+
+
+```
+1. 들어온 문자열을 쪼개어 배열로 만든다.(split)
+
+2. 오름차순으로 정렬한다.(sort)
+
+3. 반전시킨다(reverse)
+
+4. 문자 하나하나 들어가있는 배열을 합친다.(reduce)
+
+``` javascript
+// 전체 문자열 반대로 뒤집기 
+var name = "test";
+
+var nameReverse = name.split("").reverse().join(""); 
+
+
+
+
+
+```
+
+```javascript
+// 자연수 뒤집어 배열로 만들기
+// n => 12345 를 뒤집어서 [5,4,3,2,1] 로 만들고자 할때.
+function solution(n) {
+    let answer = [];
+    let str = parseInt(n) + ''
+    let a = str.split('').reverse()
+    a.forEach((i)=>answer.push(parseInt(i)))
+    return answer;
+}
+
+
+```
 
 # parseInt() 
 문자열 인자를 파싱하여 특정 진수 의 정수를 반환한다.
@@ -278,67 +416,6 @@ const str3 = ['펭수','라이언','어피치','콘','브라운'];
 // => [네오 , 튜브 , 프로도 , 브라운 ]
 str3.splice(0,4,'네오','튜브','프로도')
 console.log(str3)
-
-```
-# 숫자 내림차순으로 정렬하는법 
-
-``` javascript
-const solution = (n) => {
-    let answer = 0;
-    let temp ='' 
-    temp = n.toString() // 들어온 parameter 를 string 
-    temp = temp.split('').sort().reverse().join('') // split 한다음 문자열을 배열로 생성 , reverse 후 , join 
-    return parseInt(temp);
-}
-
-
-```
-
-# 문자열 정렬하는 방법 ( reverse )  오름차순 
-
- ```javascript
-
-const arrSort = s => {
-   let a = s.split('').sort().reverse().reduce((a,b) => a+b) 
-   console.log(a) 
-   }
-    arrSort("ceasgwZ")
-
-
-
-
-```
-1. 들어온 문자열을 쪼개어 배열로 만든다.(split)
-
-2. 오름차순으로 정렬한다.(sort)
-
-3. 반전시킨다(reverse)
-
-4. 문자 하나하나 들어가있는 배열을 합친다.(reduce)
-
-``` javascript
-// 전체 문자열 반대로 뒤집기 
-var name = "test";
-
-var nameReverse = name.split("").reverse().join(""); 
-
-
-
-
-
-```
-
-```javascript
-// 자연수 뒤집어 배열로 만들기
-// n => 12345 를 뒤집어서 [5,4,3,2,1] 로 만들고자 할때.
-function solution(n) {
-    let answer = [];
-    let str = parseInt(n) + ''
-    let a = str.split('').reverse()
-    a.forEach((i)=>answer.push(parseInt(i)))
-    return answer;
-}
-
 
 ```
 # 문자열에서 중복된 값 제거하기 
