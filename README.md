@@ -1,5 +1,44 @@
 # ES6-Js / 그외 몰랐던 문법들 정리 
+# Array.prototype.filter()
+filter() 를 사용하면 , 파라미터로 넘긴 함수의 조건을 만족하는 요소만을 모아 배열로 반환한다. 즉 , 필터링을 해주고 필터링한 요소를 여러개를 반환할때 사용한다. 
 
+``` javascript
+
+const arr1 = [{name:'hello',age:20},{name:'테스트',age:21},{name:'테스트2',age:19},{name:'테스트3',age:19},{name:'테스트4',age:19},]
+
+const filtering = arr1.filter((item)=> item.age === 19);
+const filtering2 = arr1.filter((item)=> item.age > 19);
+//console.log(filtering)
+console.log(filtering2)
+
+
+```
+``` javascript
+// 사용 예시2 0,null , nan , 'undefined'를 제외하고 필터링하기 
+var arr = [
+  { id: 15 },
+  { id: -1 },
+  { id: 0 },
+  { id: 3 },
+  { id: 12.2 },
+  { },
+  { id: null },
+  { id: NaN },
+  { id: 'undefined' }
+];
+
+
+const result = arr.filter((v,i)=>{
+  if(v.id && v.id !== 'undefined'){
+    return arr
+  }
+})
+console.log(result)
+
+
+
+
+```
 # Array.prototype.sort()
 배열을 정렬한다.
 
@@ -304,20 +343,7 @@ const solution = (seoul) => {
 
 
 ```
-# filter
-filter() 를 사용하면 , 파라미터로 넘긴 함수의 조건을 만족하는 요소만을 모아 배열로 반환한다. 즉 , 필터링을 해주고 필터링한 요소를 여러개를 반환할때 사용한다. 
 
-``` javascript
-
-const arr1 = [{name:'hello',age:20},{name:'테스트',age:21},{name:'테스트2',age:19},{name:'테스트3',age:19},{name:'테스트4',age:19},]
-
-const filtering = arr1.filter((item)=> item.age === 19);
-const filtering2 = arr1.filter((item)=> item.age > 19);
-//console.log(filtering)
-console.log(filtering2)
-
-
-```
 
 # some (조건을 만족하는 요소가 있는지 확인하기 )
 조건을 만족하는 요소가 1개라도 있으면 true 그렇지 않으면 false 를 반환 , 조건을 만족하는 요소가 있으면 남은 요소들을 더 확인하지 않고 true 를 반환하고 종료한다.
