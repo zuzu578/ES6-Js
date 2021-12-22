@@ -223,7 +223,7 @@ console.log(str1)
  
   ```
   
-# Match.min / Match.max 배열에서 사용하기
+# Math.min / Math.max 배열에서 사용하기
 
 ```javascript
 
