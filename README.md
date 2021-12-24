@@ -1,6 +1,38 @@
 # ES6-Js / 그외 몰랐던 문법들 정리 
+# 문자열 공백제거하는방법
+```javascript
+
+let str1 = '             how are you      to  day        everyone';
+console.log(str1.trim())// 앞뒤공백제거
+console.log(str1.replace(/\s+/g, ''))
+console.log(str1.split(' ').filter(el=>el !='').join(' '))
+console.log(str1.replace(/\s+/g, ' '))
+
+
+```
+# 배열에서 중복제거하기 / + Array.from 으로 배열생성 
+1) set
+2) filter + indexOf()
+```javascript
+const temp = [1,2,3,4,4,4,4,4,5]
+let s = new Set(temp)
+s = Array.from(s)
+console.log(s)
+```
 # Hoisting
 함수 안에 있는 선언들을 모두 끌어 올려서 해당 함수 유효범위의 최상단에 선언하는것을 말한다.
+# 객체의 병합(복사)
+```javascript
+//객체의 복사는 이렇게하면된다.
+let objSource = {item1:'test1',item2:'test2'}
+// 빈객체와 원본객체를 병합 
+let objClone = Object.assign({},objSource)
+console.log(objClone)
+// 병합원칙
+//1) 없는 속성은 추가한다.
+//2) 중복되는 속성은 원본객체(두번째 파라미터) 의 속성값으로 덮어쓴다.
+
+```
 # 객체의 상속
 ```javascript
 const originalObj = {name:'hello',age:5,};
