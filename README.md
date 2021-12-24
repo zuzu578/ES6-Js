@@ -1,4 +1,31 @@
 # ES6-Js / 그외 몰랐던 문법들 정리 
+# Hoisting
+함수 안에 있는 선언들을 모두 끌어 올려서 해당 함수 유효범위의 최상단에 선언하는것을 말한다.
+# 객체의 상속
+```javascript
+const originalObj = {name:'hello',age:5,};
+const childObj = Object.create(originalObj);
+//console.log(childObj.name)
+// 부모 객체값 변경 
+originalObj.name = '변경햇음';
+console.log(childObj.name)
+
+```
+# 호이스팅 대상
+
+1) var 변수 선언 , 함수선언문
+2) let / const 변수 선언과 함수표현식에서는호이스팅이 발생하지 않는다.
+``` javascript
+foo();
+foo2();
+function foo() { console.log('hh') }
+foo2 = function() { console.log('hh2')} // 이거 안댐
+
+```
+# 호이스팅 우선순위
+
+변수 선언이 함수 선언보다 위로 끌려옴.
+
 # 래퍼 객체
 래퍼객체란 원시데이터 타입(string,number...등)을 감싸는 객체이다.
 
