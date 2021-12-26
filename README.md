@@ -1,5 +1,30 @@
 # ES6-Js / 그외 몰랐던것들
 
+# 단축평가 평가
+단축평가란 , 예를들어서 And 연산에 대한 것은 두값을 모두 평가하지 않아도 될때가 있는데 , 예를들어서 xfalse 이고 y 가 true 일때 x && y는 false 를 반환한다. y를 평가할 필요도없이 false 이고 ,
+x || y 에서 x 가 참이면 y를 비교할 필요없이 true 이다. 이러한동작을 단축 평가라고한다.
+
+단축평가는 이럴때 사용된다.
+``` javascript
+//변수할당할때 
+const status = true;
+let temp = '';
+temp = status && 'test!';
+console.log(temp)
+```
+```javascript
+// null / undefined 체크할때사용 
+const test = (params) =>{
+ // console.log(params);
+  const res = params || '비어있음'
+  console.log(res)
+}
+
+test();
+
+
+```
+
 # jwt 
 json web token
 
