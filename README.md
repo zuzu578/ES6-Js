@@ -1,5 +1,21 @@
 # ES6-Js / 그외 몰랐던것들
 
+# loop async 
+loop 안에서 비동기 처리를 하려면
+
+for await 를 사용한다 , 혹은 promise all 을 사용해도 된다
+
+``` typescript
+const employeeList = await employeeModels.getCompanyList(where);
+for await (let item of employeeList) {
+    const employee: any = item.toJSON();
+    list.push({
+      ...employee,
+    });
+  }
+
+
+```
 # 단축평가 평가
 단축평가란 , 예를들어서 And 연산에 대한 것은 두값을 모두 평가하지 않아도 될때가 있는데 , 예를들어서 xfalse 이고 y 가 true 일때 x && y는 false 를 반환한다. y를 평가할 필요도없이 false 이고 ,
 x || y 에서 x 가 참이면 y를 비교할 필요없이 true 이다. 이러한동작을 단축 평가라고한다.
