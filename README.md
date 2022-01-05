@@ -25,7 +25,7 @@ test();
 
 ```
 
-# jwt 
+# jwt 1
 json web token
 
 jwt 는 인증에 필요한 정보들을 암호화시킨 토큰을 의미한다. Access token 을 http 헤더에 실어서 서버로 보낸다, 쿠키 세션방식은 세션 저장소가
