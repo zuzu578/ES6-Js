@@ -1,3 +1,20 @@
+# Object.assign()
+ 객체를 합칠때 사용 
+ 
+ ```typescript
+   let test: any = {};
+  const temp = rows.map((item) => {
+    if (Number(item.idx) === Number(employeeInfo?.companyIdx)) {
+      const companyInfo = {
+        companyIdx: employeeInfo?.companyIdx,
+        state: employeeInfo?.state,
+      };
+      test = Object.assign(item, companyInfo);
+    }
+  });
+  console.log("test!!!!!!!============>", test);
+ 
+ ```
 # ES6-Js / 그외 몰랐던것들
 
 # password 유효성 검사 정규식 
