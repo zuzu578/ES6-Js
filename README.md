@@ -1,3 +1,32 @@
+# 얕은복사
+
+얕은 복사는 참조 주소 값의 복사를 나타낸다 
+
+```javascript
+const obj = {value : 1}
+const newObj = obj ; 
+
+newObj.value = 4;
+
+console.log(obj.value); // 2
+console.log(obj== newObj); //true
+
+
+```
+# 깊은 복사
+
+``` javascript
+깊은 복사는 값 자체의 복사를 나타낸다.
+
+let a = 1;
+let b = a;
+
+b = 2;
+console.log(a) // 1
+console.log(b) // 2 
+console.log(a === b) false;
+
+```
 # 시퀄라이즈에서 where 조건 추가하여 sql 만들기 
 
 ``` typescript
