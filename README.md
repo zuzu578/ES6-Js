@@ -1,3 +1,42 @@
+# 시퀄라이즈에서 where 조건 추가하여 sql 만들기 
+
+``` typescript
+let idxParams = {};
+console.log('searchParams===>' , searchParams);
+
+let createdTime = {};
+if(searchParams.range){
+  createdTime = {
+    createdTime:{
+    [Op.between]:[
+      searchParams.range.createdTime.from,
+      searchParams.range.createdTime.to,
+    
+    ]
+  }
+  }
+}
+
+let contentValue :any = "";
+let idx : any = "";
+console.log('contentValue====>',contentValue);
+if(where.idx){
+  if(searchParams.contentValue.indexOf("%") >= 0){
+    contentValue = { [Op.like]:searchParams.contentValue}
+  }
+  idx = {
+    idx: where.idx
+  }
+  idxParams = {
+    ...idx, // where idx = ? 
+    [Op.or] : [{title:contentValue } , {context: contentValue}], // or 
+    ...createdTime, // between 
+  }
+}
+const result = commentModels.testFind(idxParams);
+
+```
+
 # Object.assign()
  객체를 합칠때 사용 
  
