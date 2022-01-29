@@ -1,3 +1,11 @@
+# 배열에서 중복찾고 중복제거 
+
+``` javascript
+let test = [...participant,...completion];
+  let temp = test.find((v,i) => participant.indexOf(v) === i)
+  console.log(temp)
+
+```
 # 얕은복사
 
 얕은 복사는 참조 주소 값의 복사를 나타낸다 
