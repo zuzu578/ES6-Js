@@ -1,3 +1,13 @@
+# 배열에서 숫자 오름차순 정렬
+
+
+``` javascript
+B.sort(function(a, b)  {
+    return b - a;
+  });
+
+```
+
 # 배열에서 중복찾고 중복제거 
 
 ``` javascript
