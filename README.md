@@ -1,3 +1,16 @@
+# 자바스크립트에서 Like 검색 구현해보기
+
+```javascript
+
+let a = ["foo","fool","cool","god"];
+var term = 'oo'; // search term (regex pattern)
+var search = new RegExp(term , 'i'); // prepare a regex object
+let b = a.filter(item => search.test(item));
+console.log(b); // ["foo","fool","cool"]
+
+```
+
+
 # 배열에서 숫자 오름차순 정렬
 
 
