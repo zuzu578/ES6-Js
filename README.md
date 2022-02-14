@@ -1,3 +1,13 @@
+# querySelector , querySelectorAll
+
+1) querySelector 
+특정 name 이나 id 를 제한하지 않고 css 선택자를 사용하여 요소를 찾는다.
+반환객체는 한개의 요소만 찾을 수 있으며 동일한 클래스명을 가진 객체가 있는경우 html 문서내에 첫번째를 나타나는 요소를 반환한다.
+2) querySelectorAll
+querySelector 와 동일하게 동작하나 , 해당 선택자에 해당하는 모든요소를 가져온다.
+반환객체는 nodelist 이기 때문에 for 또는 foreach 를 사용한다.
+
+
 # 자바스크립트에서 Like 검색 구현해보기
 
 ```javascript
