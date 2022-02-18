@@ -1,3 +1,77 @@
+# react test code 
+
+
+
+
+``` react
+import React, { useState, useEffect } from "react";
+import ReactDOM from "react-dom";
+import "./styles.css";
+
+function App() {
+  const [todo, setTodo] = useState([{ todo: "test" }]);
+  const [newTodo, setNewTodo] = useState({ todo: "test2" });
+
+  const addTodo = () => {
+    setTodo([...todo, newTodo]);
+  };
+
+  const getInput = (e) => {
+    setNewTodo({ todo: e.target.value });
+  };
+
+  const deleteTodo = (todo) => {
+    console.log(todo);
+    //setTodo()
+  };
+
+  return (
+    <div className="App">
+      <h1> test </h1>
+      <input type="text" onChange={getInput}></input>
+      <button onClick={addTodo}> add </button>
+      <div>
+        {todo.map((item) => {
+          return (
+            <div>
+              {item.todo}{" "}
+              <button
+                onClick={() => {
+                  deleteTodo();
+                }}
+              >
+                X{" "}
+              </button>
+            </div>
+          );
+        })}
+      </div>
+    </div>
+  );
+}
+
+const rootElement = document.getElementById("root");
+ReactDOM.render(<App />, rootElement);
+
+
+
+
+
+
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
 # querySelector , querySelectorAll
 
 1) querySelector 
