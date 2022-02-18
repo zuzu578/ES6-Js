@@ -3,26 +3,26 @@
 
 
 
-``` react
+``` jsx
 import React, { useState, useEffect } from "react";
 import ReactDOM from "react-dom";
 import "./styles.css";
 
 function App() {
-  const [todo, setTodo] = useState([{ todo: "test" }]);
-  const [newTodo, setNewTodo] = useState({ todo: "test2" });
-
+  const [todo, setTodo] = useState([{ todo: "test", idx: 1 }]);
+  const [newTodo, setNewTodo] = useState([{ todo: "test2", idx: 2 }]);
+  let [idx, setIdx] = useState(3);
   const addTodo = () => {
     setTodo([...todo, newTodo]);
   };
 
   const getInput = (e) => {
-    setNewTodo({ todo: e.target.value });
+    setIdx((idx += 1));
+    setNewTodo({ todo: e.target.value, idx: idx });
   };
 
   const deleteTodo = (todo) => {
     console.log(todo);
-    //setTodo()
   };
 
   return (
@@ -34,7 +34,7 @@ function App() {
         {todo.map((item) => {
           return (
             <div>
-              {item.todo}{" "}
+              {item.todo} {item.idx}
               <button
                 onClick={() => {
                   deleteTodo();
@@ -52,6 +52,7 @@ function App() {
 
 const rootElement = document.getElementById("root");
 ReactDOM.render(<App />, rootElement);
+
 
 
 
