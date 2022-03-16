@@ -1,3 +1,9 @@
+# 파일 확장자 체크 
+
+``` javascript
+const fileChk = commentList[i].fileName.slice(commentList[i].fileName.indexOf(".") + 1).toLowerCase();
+
+```
 # react test code 
 
 
