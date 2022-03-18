@@ -1,3 +1,18 @@
+# 파일 크기 체크 
+```javascript
+let isAbleToUpload = true;
+document.getElementById('inputGroupFile04').onchange = function () {
+	const fileTargetSize = document.getElementById("inputGroupFile04").files[0].size;
+	const maxSize = 100*1024*1024;
+	if(fileTargetSize > maxSize){
+		alert("100mb 이하의 파일만 업로드 가능합니다.");
+		isAbleToUpload = false;
+		console.log(isAbleToUpload);
+		return;
+	}
+};
+
+```
 # 파일 확장자 체크 
 
 ``` javascript
