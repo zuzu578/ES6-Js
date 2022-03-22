@@ -1,3 +1,19 @@
+# 무한스크롤 이벤트 감지 
+
+``` javascript
+window.onscroll = function(ev) {
+    if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
+        
+    	nowPage++;
+    	//getFreeBoardData()
+        //alert(nowPage);
+    	console.log("event detected!",nowPage);
+    }
+};
+
+
+```
+
 # 파일 크기 체크 
 ```javascript
 let isAbleToUpload = true;
