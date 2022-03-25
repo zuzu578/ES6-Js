@@ -1,4 +1,5 @@
 # jquery 에서 div 안에 있는 input 값 (하위요소) 가져오기
+참고 : https://devmg.tistory.com/58
 ``` javascript
 
 // 예를들어서
