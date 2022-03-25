@@ -1,3 +1,23 @@
+# jquery 에서 div 안에 있는 input 값 (하위요소) 가져오기
+``` javascript
+
+// 예를들어서
+<div class="test">
+	<div><input type="text" value="" id="" name="test"> </div>
+
+</div>
+
+	const parent = $(e).parent().parent().parent()[0]; // 클릭한 요소의 상위 element 를 찾는다.
+	
+	const nickNameNode = $(parent)[0].children[0]; // 상위 요소 element 에 속하는 div 자식 요소를 찾는다.
+	const replyPassWordNode = $(parent)[0].children[1];
+	const replyContentsNode = $(parent)[0].children[1].children[1];
+	
+	const commentUserNickName = $(nickNameNode).children().val(); // 자식요소의 value (input value) 를 가져온다.
+	const commentUserPassword = $(replyPassWordNode).children().val();
+	const commentUserContents = $(replyContentsNode).children().val();
+
+```
 # 무한스크롤 이벤트 감지 
 
 ``` javascript
