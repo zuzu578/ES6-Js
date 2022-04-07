@@ -1,3 +1,18 @@
+# 문자열 중복 제거 (set)
+```javascript
+
+// string 인자로 "🎨🎍🎍🎍🎪🎪👜🎍🎨👜👜🎍" 이러한 문자열이 주어집니다
+function solution(string) {
+   
+  new Set(string);			// {"a", "b", "c", "z"}
+[...new Set(string)];		//  ["a", "b", "c", "z"]
+return [...new Set(string)].join('');
+
+   
+}
+
+```
+
 # jquery 에서 div 안에 있는 input 값 (하위요소) 가져오기
 참고 : https://devmg.tistory.com/58
 ``` javascript
