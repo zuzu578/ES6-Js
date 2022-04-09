@@ -1,3 +1,37 @@
+# addEventListener
+
+Example 
+
+```javascript
+const getData = async() =>{
+  const api_key = "testApikey"; // pseudo code 
+  const data = await axios.get(`https://kr.api.riotgames.com/lol/platform/v3/champion-rotations?api_key=${api_key}`); 
+  return data;
+}
+const temp = () => {
+  return new Promise((resolve , reject) => {
+    resolve(getData());
+  })
+}
+
+const btn = document.getElementById('button');
+
+
+btn.addEventListener("click", function() {
+ temp()
+  .then((res)=>{
+    //console.log(res.data);
+    res.data.freeChampionIds.map((item)=>{
+      console.log(item);
+    })
+  })
+});
+
+
+
+
+```
+
 # 문자열 중복 제거 (set)
 ```javascript
 
