@@ -4,7 +4,7 @@ Example
 
 ```javascript
 const getData = async() =>{
-  const api_key = "testApikey"; // pseudo code 
+  const api_key = "RGAPI-52b50e3e-afa4-4076-b86f-bb245abc1b12";
   const data = await axios.get(`https://kr.api.riotgames.com/lol/platform/v3/champion-rotations?api_key=${api_key}`); 
   return data;
 }
@@ -20,12 +20,14 @@ const btn = document.getElementById('button');
 btn.addEventListener("click", function() {
  temp()
   .then((res)=>{
-    //console.log(res.data);
     res.data.freeChampionIds.map((item)=>{
       console.log(item);
+      document.getElementById("dataList").innerHTML += `<div>${item} </div>`
     })
   })
 });
+
+
 
 
 
