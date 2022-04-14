@@ -221,6 +221,9 @@ B.sort(function(a, b)  {
 let test = [...participant,...completion];
   let temp = test.find((v,i) => participant.indexOf(v) === i)
   console.log(temp)
+   // 또는 
+   const uniqueArr = temp.filter((element, index) => {
+    return temp.indexOf(element) === index;
 
 ```
 # 얕은복사
