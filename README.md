@@ -1,3 +1,12 @@
+# Array.prototype.slice()
+
+```javascript
+const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+const arr1 = arr.slice(3, 5); // [4, 5]
+```
+
+
+
 # spread 연산자로 object 추가해보기 
 
 ```javascript
