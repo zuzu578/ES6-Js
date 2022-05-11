@@ -1,3 +1,26 @@
+# spread 연산자로 object 추가해보기 
+
+```javascript
+let phoneArr = [];
+const result = JSON.parse(results).resultList.map((item)=>{
+			
+			phoneArr.push(item.areaNo);
+			phoneArr.push(")");
+			phoneArr.push(item.middleTelno);
+			phoneArr.push("-");
+			phoneArr.push(item.endTelno);
+			const object = {telNumber : phoneArr.join("")};
+			const copy = {...item,...object};
+			
+			return copy;
+		
+		})
+		console.log('result!!!',result);
+
+
+```
+
+
 # addEventListener
 
 Example 
