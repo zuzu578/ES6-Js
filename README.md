@@ -642,6 +642,54 @@ console.log(items) // name 에서 알파벳 순서 반대로 정렬
 
 ```
 
+
+# 비 ASCII 문자열 정렬
+String.localeCompare 를 사용한다. 
+
+공식에선 이렇게 말한다. 
+
+ASCII 이외의 문자, 즉 악센트 부호가있는 문자 (e, é, è, a, ä 등)가있는 문자열을 정렬하려면 영어가 아닌 다른 언어의 문자열에 String.localeCompare를 사용하십시오. 이 함수는 해당 문자를 비교하여 올바른 순서로 나타낼 수 있습니다.
+
+이렇게 문자열을 정렬할때 , localCompare를 사용할수있다.
+
+
+```javascript
+
+var items = ['réservé', 'premier', 'cliché', 'communiqué', 'café', 'adieu'];
+items.sort(function (a, b) {
+  return a.localeCompare(b);
+});
+
+
+
+```
+
+
+
+``` javascript 
+// 해당코드는 문자열 길이가 짧은것부터 정렬 하고 , 길이가 같을경우 사전순으로 정렬하는 코드이다. 
+const input = [
+  '13',
+  'but',
+  'i',
+  'wont',
+  'hesitate',
+  'no',
+  'more',
+  'no',
+  'more',
+  'it',
+  'cannot',
+  'wait',
+  'im',
+  'yours'
+];
+
+const sorted = input.sort((a, b) => a.length - b.length || a.localeCompare(b));
+const uniqueValues = new Set(sorted);
+console.log(Array.from(uniqueValues).join('\n'));
+
+```
 # 문자열로 들어온 숫자 내림차순으로 정렬하는법 
 
 ``` javascript
