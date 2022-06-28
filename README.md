@@ -586,6 +586,10 @@ function compare(a, b) {
   // a must be equal to b
   return 0;
 }
+
+반환 값이 -1 이라면 정렬 순서를 바꾸지 않는다.
+반환값이 1이라면 큰수인 a 가 먼저 나온것이므로 a와 b 의 순서를 바꿔 정렬한다.
+a,b 가 같은경우 정렬 순서를 바꿀 필요가없다.
 /**
  * compareFunction(a,b) 가 0 보다 작은경우 a를 b보다 낮은색인으로 정렬한다. a가 먼저온다
  * compareFunction(a,b) 가 0을 반환하면 a,b를 서로 변경하지않고 모든 다른요소에 대해 정렬한다.
