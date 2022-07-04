@@ -1,3 +1,22 @@
+# 문자열에서 특정문자 갯수 세기
+
+```javascript
+const text = 'aaabbbaaabababaaaabaa';
+let count = 0;
+const searchChar = 'a'; // 찾으려는 문자
+let pos = text.indexOf(searchChar); //pos는 0의 값을 가집니다.
+
+while (pos !== -1) {
+  count++;
+  pos = text.indexOf(searchChar, pos + 1); // 첫 번째 a 이후의 인덱스부터 a를 찾습니다.
+}
+
+console.log(count); 
+
+
+```
+
+
 # order by null
 
 ```javascript
