@@ -1,3 +1,28 @@
+# order by null
+
+```javascript
+const solutions = () => {
+  const arr = ["test","hello","world","tree",null,"map",null,"parameter",null];
+  
+  arr.sort((a,b)=>{
+    // null 을 우선으로 sort
+    if(a == null || b ==null){
+      return -1;
+    }
+    // 사전순으로 sort 
+    if(a<b){
+      return -1;
+    }
+  })
+
+  console.log(Array.from(arr));
+}
+
+solutions();
+
+
+```
+
 # Array.prototype.slice()
 
 ```javascript
