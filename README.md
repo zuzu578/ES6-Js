@@ -1,3 +1,18 @@
+# Number.prototype.toFiexed
+
+toFixed() 메서드는 숫자를 고정 소수점 표기법(fixed-point notation)으로 표시한다.
+
+ex)
+```javascript
+const f = 123.456;
+
+Number.parseFloat(f).toFixed(2);
+// ===> 123.46
+
+```
+
+
+
 # distinct 구현 
 
 ```javascript
