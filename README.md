@@ -1,3 +1,25 @@
+# distinct 구현 
+
+```javascript
+const solutions = () => {
+  const arr = [1,1,1,1,1,2,3,3,3,4,4,4,5,5,6];
+  const unique = [];
+  
+  for(let i = 0 ; i < arr.length ; i++){
+    if(unique.indexOf(arr[i]) === -1){
+      unique.push(arr[i])
+    }
+  }
+
+  console.log('unique =>' , unique);
+}
+
+solutions();
+
+
+```
+
+
 # 문자열에서 특정문자 갯수 세기
 
 ```javascript
