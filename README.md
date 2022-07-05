@@ -1,3 +1,9 @@
+# list object [{}] 에서 중복제거하기 
+```javascript
+let uniqueObjArray = [
+    ...new Map(resultArr.map((item) => [item["char"], item])).values(),];
+
+```
 # Number.prototype.toFiexed
 
 toFixed() 메서드는 숫자를 고정 소수점 표기법(fixed-point notation)으로 표시한다.
