@@ -1,3 +1,21 @@
+# Set.prototype.has()
+```javascript
+has() 메서드는 Set 객체에 주어진 요소가 존재하는지 여부를 판별해 반환한다.
+
+const set1 = new Set([1, 2, 3, 4, 5]);
+
+console.log(set1.has(1));
+// expected output: true
+
+console.log(set1.has(5));
+// expected output: true
+
+console.log(set1.has(6));
+// expected output: false
+
+
+```
+
 # list object [{}] 에서 중복제거하기 
 ```javascript
 let uniqueObjArray = [
