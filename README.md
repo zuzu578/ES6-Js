@@ -55,6 +55,15 @@ const solutions = () => {
 
 solutions();
 
+// 또는 indexOf 사용 
+
+
+const arr = [2, 1, 2, 3, 4, 3, 4];
+
+const result = arr.filter((item,index)=>arr.indexOf(item) === index);
+
+
+console.log(Array.from(result))
 
 ```
 
