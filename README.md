@@ -1,3 +1,30 @@
+# object 에서 중복되는 자체 값 전체를 제거하기 
+```javascript
+let input1 = ['Baha','Askar','Baha','Artem'];
+const input2 = ['enter','enter','leave','enter'];
+let arr = [];
+const store = [];
+
+input1 = input1.sort((a,b)=>a.localeCompare(b)).sort((a,b)=>{
+  if(a[1] > b[1]){
+    return -1;
+  }
+});
+
+input1.forEach((item,index)=>{
+   arr.push({
+    name:input1[index],
+    flag:input2[index]
+  })
+})
+console.log(arr);
+
+arr.filter((item,index)=>arr[index+1] !== undefined && arr[index].name !== arr[index+1].name && item.flag !== 'leave').forEach((item)=>{
+  console.log(item.name);
+});
+
+```
+
 # Set.prototype.has()
 ```javascript
 has() 메서드는 Set 객체에 주어진 요소가 존재하는지 여부를 판별해 반환한다.
