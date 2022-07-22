@@ -1,3 +1,31 @@
+# array 에서 중복되는 원소 자체를제거 하기 
+
+```javascript
+
+let arr = [1,1,2,3,4,3];
+arr = arr.sort((a,b) => a-b);
+let check = [];
+
+const filteringFnc = (idx) => {
+ arr = arr.filter((item)=>item !== idx);
+}
+
+for(let i = 0 ; i < arr.length ; i++){
+  if(arr[i] !== undefined && arr[i] === arr[i+1]){
+    check.push(arr[i]);
+  }
+}
+
+check.forEach((item)=>{
+  filteringFnc(item)
+})
+
+console.log(arr);
+
+
+```
+
+
 # object 에서 중복되는 자체 값 전체를 제거하기 
 ```javascript
 let input1 = ['Baha','Askar','Baha','Artem'];
