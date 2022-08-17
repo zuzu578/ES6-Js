@@ -1,3 +1,12 @@
+# list object 에서 Math.max 사용하기
+
+```javascript
+// target : object key 값 으로 
+// https://stackoverflow.com/questions/4020796/finding-the-max-value-of-an-attribute-in-an-array-of-objects
+ Math.max(...array.map(o => o.y))
+ 
+```
+
 # array 에서 중복되는 원소 자체를제거 하기 
 
 ```javascript
