@@ -1,3 +1,7 @@
+# Object.prototype.hasOwnProperty() 
+
+hasOwnProperty() 메소드는 객체가 특정 프로퍼티를 가지고 있는지를 나타내는 불리언 값을 반환한다.
+
 # java 의 getOrDefault() 와 같은 방식으로 배열안에 있는 원소들의 최빈값을 구하기 (빈도수 구하기) 
 
 ```javascript 
