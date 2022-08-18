@@ -26,6 +26,32 @@ for (let i = 0; i < target.length; i++) {
 }
 
 ```
+최빈값 구하기 예제 
+```javascript
+// 2) java 의 getOrDefault 같은 방식으로 해결 
+
+let key;
+const obj = {};
+let test = 0;
+for (let i = 0; i < target.length; i++) {
+  // 없는경우 삽입 후 1 count 
+  // 있으면 삽입한 count +1 
+  obj[target[i]] = obj.hasOwnProperty(target[i]) ? obj[target[i]] + 1 : 1;
+}
+
+let arr = Object.values(obj);
+let max = Math.max(...arr);
+// 빈도수가 같은 경우 list 에 삽입하여 사전순으로 정렬 
+const result = [];
+for (let key in obj) {
+  if (obj[key] === max) {
+    result.push(key);
+  }
+}
+result.sort((a, b) => b - a).forEach((item) => console.log(item));
+
+
+```
 
 # object 에 dynamic key 추가 하기 
 ```javascript
