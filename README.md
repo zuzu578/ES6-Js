@@ -1,3 +1,42 @@
+# java 의 getOrDefault() 와 같은 방식으로 배열안에 있는 원소들의 최빈값을 구하기 (빈도수 구하기) 
+
+```javascript 
+const target = [
+  'a',
+  'a',
+  'b',
+  'a',
+  'b',
+  'b',
+  'b',
+  'a'];
+  
+let key;
+const obj = {};
+let test = 0;
+for (let i = 0; i < target.length; i++) {
+  // 없는경우 삽입 후 1 count 
+  // 있으면 삽입한 count +1 
+  obj[target[i]] = obj.hasOwnProperty(target[i]) ? obj[target[i]] + 1 : 1;
+  console.log(obj);
+}
+
+```
+
+# object 에 dynamic key 추가 하기 
+```javascript
+// 간혹 object 의 key 값을 동적으로 ex) {1 : 'test} , {2: 'test} , {3 : 'test'} 이렇게 해주고 싶을경우 
+
+const obj = {};
+
+for (let i = 0 ; i < target.length ; i ++ ) { 
+    obj[target[i]] = 'test'
+}
+
+```
+// obj[target[i]] 처럼 [  ] 안에 dynamic 한 값을 넣는다.
+
+
 # list object 에서 Math.max 사용하기
 
 ```javascript
