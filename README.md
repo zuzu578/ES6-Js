@@ -1,3 +1,12 @@
+# Object.entries()
+object 를 순회하면서 key 값 value 값을 순회한다. 
+```javascript
+// 예
+
+for (const [key, value] of Object.entries(obj)) {
+  console.log(`${key}: ${value}`);
+}
+```
 # Object.prototype.hasOwnProperty() 
 
 hasOwnProperty() 메소드는 객체가 특정 프로퍼티를 가지고 있는지를 나타내는 불리언 값을 반환한다.
