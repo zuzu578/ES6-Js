@@ -1,7 +1,7 @@
 # Object.entries()
 object 를 순회하면서 key 값 value 값을 순회한다. 
 ```javascript
-// 예
+// 예시
 
 for (const [key, value] of Object.entries(obj)) {
   console.log(`${key}: ${value}`);
